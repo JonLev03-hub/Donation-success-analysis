@@ -1,12 +1,17 @@
 # Donation-success-analysis
+## Overview 
 Large companies have millions of dollars that they are willing to donate to charity but its always a hard decision to pick the right one that will use the money most effectively. I will be using deep learning models to predict the best way to allocate that money.
 
 To achieve this I will be reviewing a list of previous applicants inside a neural network. This dataframe is displayed below. 
 ![image](https://user-images.githubusercontent.com/81537476/155869757-05aa5307-63b8-4064-9ed0-2a20fff8427a.png)
 
-This data had already been relatively clean, so to prep this data I simply had to use the OneHotEncoder on the categorical data. 
+before displaying this data I had removed the EIN, and NAME columns because they are not useful for this analysis. 
+The target was the status column.
 
-The target was the status column. 
+I had done tests two hidden layers, and each layer contained between 4 and 36 neurons. after 600 + tests with different combinations we had a maximum accuracy of 71%. To improve this I experimented with different activation function, and different neuron counts. 
+
+## The analysis
+This data had already been relatively clean, so to prep this data I simply had to use the OneHotEncoder on the categorical data.  
 
 For the first attempt I created a neural network using Relu as the activation function for two hidden layers (node count of 5 and 7), and a sigmoid function as the output. This resulted with a accuracy of approximately 56% after 50 epochs. As this is obviously not effective for a solution I setup a quick boute force method that could try a large sum of combimations. after testing 485 combinations I was able to get some interesting results, then I did another batch test and canceled it after 65 rounds due to poor results. 
 
@@ -27,4 +32,6 @@ To further the testing I had created another test allowing the hidden nodes to c
 
 Above I have listed the average performance by number of hidden layer one or hidden layer two nodes. With this test I still returned an average of 59% accuracy with a maximum of 71%. so verry similar to the other tests. 
 
+# Revisions
+To optimize this machine learning models it would likely be best to find your best models and do tests to allow further learning with more epochs. 
 
