@@ -19,3 +19,12 @@ the second batch of tests restricted the output function to sigmoid, and allowed
 Compiling data from both test it seems that using relu as an activation function returns an average 5% higher performance in this dataset, but to get performance to 75% or more I need to make more adjustments.
 
 the data for most the test is saved in csv files inside the github. , along with the top performing model saved as an h5 file. 
+
+To further the testing I had created another test allowing the hidden nodes to contain 12, 24 or 36 nodes, and using relu for both hidden functions, and sigmoid for the output functions since that produced the best results. This test repeated all combinations 10 times and saved the average, and with the results I made a few graphs. 
+
+![image](https://user-images.githubusercontent.com/81537476/155891842-08607e26-5359-419f-afbe-7dec108cb90d.png)
+![image](https://user-images.githubusercontent.com/81537476/155891850-b3e75259-5ac4-48d9-9002-845fc08d9d8a.png)
+
+Above I have listed the average performance by number of hidden layer one or hidden layer two nodes. With this test I still returned an average of 59% accuracy with a maximum of 71%. so verry similar to the other tests. 
+
+
