@@ -18,6 +18,4 @@ the second batch of tests restricted the output function to sigmoid, and allowed
 
 Compiling data from both test it seems that using relu as an activation function returns an average 5% higher performance in this dataset, but to get performance to 75% or more I need to make more adjustments.
 
-the data for most the test is saved in csv files inside the github. 
-
-to further this testing I will be 
+the data for most the test is saved in csv files inside the github. , along with the top performing model saved as an h5 file. 
